@@ -5,7 +5,8 @@ const app = express();
 const PORT = process.env.PORT;
 
 app.use(express.json());
-app.use("/api", require("./src/modules/users/routes/user.route.js"));
+app.use("/api", require("./src/modules/auth/routes/auth.route.js"));
+app.use("/api", require("./src/modules/users/routes/user.routes.js"));
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
@@ -22,6 +23,6 @@ app.get("/", (req, res) => {
 //   });
 // };
 
- app.listen(PORT, () => {
-   console.log(`Server running at http://localhost:${PORT}`);
- });
+app.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
+});
