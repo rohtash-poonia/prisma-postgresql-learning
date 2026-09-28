@@ -4,4 +4,4 @@
 
     router.get("/allusers",allUsers)
 
-    module.exports={router}
+    module.exports = router

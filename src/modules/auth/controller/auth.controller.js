@@ -1,6 +1,6 @@
 const bcrypt = require("bcrypt");
 const { prisma } = require("../../../config/prisma");
-const jwt = require("jsonwebtoken")
+const jwt = require("jsonwebtoken");
 
 const registerUser = async (req, res) => {
   try {
@@ -11,7 +11,9 @@ const registerUser = async (req, res) => {
         .json({ success: false, message: "All fields are required" });
     }
 
-    const existingUser = await (await prisma).user.findFirst({
+    const existingUser = await (
+      await prisma
+    ).user.findFirst({
       where: {
         OR: [{ email }, { username }],
       },
@@ -27,9 +29,11 @@ const registerUser = async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, 10);
 
     // yaha dalna hai collected data database me
-    const user = (await prisma).user.create({
+    const user =  await  prisma.user.create({
       data: { firstname, lastname, username, email, password: hashedPassword },
     });
+
+    console.log(user);
 
     return res.status(201).json({
       success: true,
@@ -47,50 +51,50 @@ const registerUser = async (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 };
-const loginUser = async (req,res) =>{
-    try {
-      const { email, password } = req.body;
-      if (!email || !password) {
-        return res.status(400).json({
-          message: "Email and password are required",
-        });
-      }
-      // Find user in PostgreSQL
-      const user = await prisma.user.findUnique({
-        where: { email },
+const loginUser = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    if (!email || !password) {
+      return res.status(400).json({
+        message: "Email and password are required",
       });
-      if (!user) {
-        return res.status(401).json({
-          message: "Invalid email or password",
-        });
-      }
-      // Compare entered password with hashed password
-      const isPasswordValid = await bcrypt.compare(password, user.password);
-
-      if (!isPasswordValid) {
-        return res.status(401).json({
-          message: "Invalid email or password",
-        });
-      }
-      // Generate JWT token
-      const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, {
-        expiresIn: "1d",
-      });
-      return res.status(200).json({
-        message: "Login successful",
-        token,
-        user: {
-          id: user.id,
-          name: user.name,
-          email: user.email,
-        },
-      });
-    } catch (error) {
-         console.error(error);
-
-         return res.status(500).json({
-           message: "Internal server error",
-         });
     }
-}
+    // Find user in PostgreSQL
+    const user = await prisma.user.findFirst({
+      where: { email },
+    });
+    if (!user) {
+      return res.status(401).json({
+        message: "Invalid email or password",
+      });
+    }
+    // Compare entered password with hashed password
+    const isPasswordValid = await bcrypt.compare(password, user.password);
+
+    if (!isPasswordValid) {
+      return res.status(401).json({
+        message: "Invalid email or password",
+      });
+    }
+    // Generate JWT token
+    const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, {
+      expiresIn: "1d",
+    });
+    return res.status(200).json({
+      message: "Login successful",
+      token,
+      user: {
+        id: user.id,
+        name: `${user.firstname} ${user.lastname}`,
+        email: user.email,
+      },
+    });
+  } catch (error) {
+    console.error(error);
+
+    return res.status(500).json({
+      message: "Internal server error",
+    });
+  }
+};
 module.exports = { registerUser, loginUser };
