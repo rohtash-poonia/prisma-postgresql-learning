@@ -3,3 +3,590 @@ node_modules
 .env
 
 /src/generated/prisma
+# ============================================================
+# OS / System files
+# ============================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.stackdump
+
+# Linux
+*~
+.directory
+
+# ============================================================
+# IDE / Editors
+# ============================================================
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# IntelliJ / JetBrains
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*.swn
+*.bak
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ============================================================
+# Logs
+# ============================================================
+
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+debug.log*
+
+# ============================================================
+# Environment / Secrets
+# ============================================================
+
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# ============================================================
+# Node.js
+# ============================================================
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+.npm/
+.yarn/
+.pnpm-store/
+
+# Yarn
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Build output
+dist/
+build/
+out/
+
+# Next.js
+.next/
+.vercel/
+
+# Nuxt
+.nuxt/
+.output/
+
+# Gatsby
+.cache/
+
+# SvelteKit
+.svelte-kit/
+
+# Astro
+.astro/
+
+# Remix
+.cache/
+build/
+
+# Vite
+.vite/
+
+# ============================================================
+# React Native / Expo
+# ============================================================
+
+.expo/
+.expo-shared/
+web-build/
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# ============================================================
+# Python
+# ============================================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Python packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Test / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ============================================================
+# Java
+# ============================================================
+
+*.class
+*.jar
+*.war
+*.ear
+
+target/
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# ============================================================
+# Kotlin
+# ============================================================
+
+.kotlin/
+*.kotlin_module
+
+# ============================================================
+# Android
+# ============================================================
+
+.gradle/
+local.properties
+.idea/
+*.iml
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# ============================================================
+# Flutter / Dart
+# ============================================================
+
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+coverage/
+
+# ============================================================
+# PHP / Composer
+# ============================================================
+
+/vendor/
+composer.phar
+.phpunit.result.cache
+
+# ============================================================
+# Laravel
+# ============================================================
+
+.env
+.phpunit.result.cache
+/storage/*.key
+
+# ============================================================
+# Ruby
+# ============================================================
+
+*.gem
+*.rbc
+.bundle/
+vendor/bundle/
+.rbenv-version
+.ruby-version
+
+# ============================================================
+# Go
+# ============================================================
+
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary
+*.test
+
+# Output
+*.out
+
+# Go workspace
+go.work
+go.work.sum
+
+# ============================================================
+# Rust
+# ============================================================
+
+target/
+Cargo.lock
+
+# Keep Cargo.lock for applications if desired:
+# !Cargo.lock
+
+# ============================================================
+# C / C++
+# ============================================================
+
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+*.exe
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+
+# ============================================================
+# .NET / C#
+# ============================================================
+
+bin/
+obj/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+.vs/
+TestResults/
+packages/
+*.nupkg
+
+# ============================================================
+# Ruby on Rails
+# ============================================================
+
+/log/*
+/tmp/*
+/storage/*
+/public/assets/
+/public/packs/
+/public/packs-test/
+/node_modules/
+/.env
+
+# ============================================================
+# Databases
+# ============================================================
+
+*.sqlite
+*.sqlite3
+*.db
+*.db-shm
+*.db-wal
+
+# ============================================================
+# Temporary files
+# ============================================================
+
+*.tmp
+*.temp
+*.cache
+.cache/
+temp/
+tmp/
+
+# ============================================================
+# Backup files
+# ============================================================
+
+*.bak
+*.backup
+*.old
+*.orig
+*.swp
+*.swo
+
+# ============================================================
+# Archives
+# ============================================================
+
+*.7z
+*.gz
+*.zip
+*.tar
+*.rar
+*.bz2
+
+# ============================================================
+# Build / Generated files
+# ============================================================
+
+dist/
+build/
+out/
+release/
+debug/
+
+# ============================================================
+# Test results
+# ============================================================
+
+test-results/
+reports/
+coverage/
+
+# ============================================================
+# Docker
+# ============================================================
+
+docker-compose.override.yml
+.docker/
+
+# ============================================================
+# Terraform
+# ============================================================
+
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# ============================================================
+# Serverless
+# ============================================================
+
+.serverless/
+.aws-sam/
+
+# ============================================================
+# Vercel
+# ============================================================
+
+.vercel/
+
+# ============================================================
+# Firebase
+# ============================================================
+
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+
+# ============================================================
+# AWS
+# ============================================================
+
+.aws-sam/
+.aws/
+
+# ============================================================
+# Certificates / Security
+# ============================================================
+
+*.pem
+*.key
+*.csr
+*.crt
+*.cer
+*.der
+*.p12
+*.pfx
+
+# ============================================================
+# Generated documentation
+# ============================================================
+
+docs/_build/
+site/
+
+# ============================================================
+# Local configuration
+# ============================================================
+
+*.local
+config.local.*
+settings.local.*
+
+# ============================================================
+# Secrets / Credentials
+# ============================================================
+
+secrets/
+credentials/
+credentials.json
+secrets.json
+service-account.json
+
+# ============================================================
+# AI / ML
+# ============================================================
+
+# Model files
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+*.bin
+
+# Datasets
+*.csv
+*.parquet
+*.feather
+
+# Experiment outputs
+mlruns/
+wandb/
+runs/
+
+# ============================================================
+# Large media files (optional)
+# ============================================================
+
+# Uncomment if you don't want these in Git:
+# *.mp4
+# *.mov
+# *.avi
+# *.mkv
+# *.wav
+# *.mp3
+# *.psd
+# *.ai
+# *.zip
+
+# ============================================================
+# Local development
+# ============================================================
+
+.local/
+.local.*
+.cache/
+.temp/
+.temp.*
+
+# ============================================================
+# Miscellaneous
+# ============================================================
+
+*.pid
+*.seed
+*.pid.lock
+*.orig
+*.rej
+
+# Ignore generated files
+generated/
+generated-files/
+
+# Ignore local scripts/output
+*.generated.*
