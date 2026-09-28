@@ -9,6 +9,7 @@ app.use("/api", require("./src/modules/users/routes/user.routes.js"));
 app.use("/api", require("./src/modules/product/routes/product.routes.js"));
 app.use("/api", require("./src/modules/category/routes/categoory.routes.js"));
 app.use("/api", require("./src/modules/cart/routes/cart.routes.js"));
+app.use("/api", require("./src/modules/orders/routes/order.route.js"));
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
