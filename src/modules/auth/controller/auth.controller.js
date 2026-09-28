@@ -13,11 +13,11 @@ const registerUser = async (req, res) => {
 
     const existingUser = await (
       await prisma
-    ).user.findFirst({
+    .user.findFirst({
       where: {
         OR: [{ email }, { username }],
       },
-    });
+    }));
 
     if (existingUser) {
       return res.status(400).json({

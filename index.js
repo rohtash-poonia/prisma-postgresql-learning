@@ -6,6 +6,7 @@ const PORT = process.env.PORT;
 app.use(express.json());
 app.use("/api", require("./src/modules/auth/routes/auth.route.js"));
 app.use("/api", require("./src/modules/users/routes/user.routes.js"));
+app.use("/api", require("./src/modules/product/routes/product.routes.js"));
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
