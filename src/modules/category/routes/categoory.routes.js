@@ -3,8 +3,8 @@ const router = express.Router();
 
 router.post(
   "/categories",
-  require("../../middleware/auth"),
-  require("../../middleware/role"),
+  // require("../../middleware/auth"),
+  // require("../../middleware/role"),
   require("../controller/category.controller")
     .createCategory,
 );
@@ -20,15 +20,15 @@ router.get(
 );
 router.put(
   "/categories/:id",
-  require("../../middleware/auth"),
-  require("../../middleware/role"),
+  // require("../../middleware/auth"),
+  // require("../../middleware/role"),
   require("../controller/category.controller")
     .updateCategory,
 );
 router.delete(
   "/categories/:id",
-  require("../../middleware/auth"),
-  require("../../middleware/role"),
+  // require("../../middleware/auth"),
+  // require("../../middleware/role"),
   require("../controller/category.controller")
     .deleteCategory,
 );

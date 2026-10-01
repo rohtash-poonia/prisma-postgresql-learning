@@ -1,0 +1,6 @@
+-- Add the required timestamp while preserving existing User rows.
+ALTER TABLE "User"
+ADD COLUMN "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP;
+
+ALTER TABLE "User"
+ALTER COLUMN "updatedAt" DROP DEFAULT;
